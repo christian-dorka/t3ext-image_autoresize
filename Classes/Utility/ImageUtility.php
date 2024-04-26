@@ -261,7 +261,7 @@ class ImageUtility
     {
         if (function_exists('mb_detect_encoding')) {
             if (mb_detect_encoding($text, 'UTF-8', true) !== 'UTF-8') {
-                $text = mb_convert_encoding($text, 'ISO-8859-1', mb_list_encodings());
+                $text = mb_convert_encoding($text, 'ISO-8859-1', 'UTF-8');
             }
         } else {
             // Fall back to hack
